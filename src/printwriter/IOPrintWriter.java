@@ -5,24 +5,28 @@ import java.io.PrintWriter;
 
 public class IOPrintWriter {
 	public static void main(String[] args) {
-		
+
 		String fileName = "First Java-Created File.txt";
-		//filename+extention created outside of PrintWriter constructor for readability efficiency
-		
+//		 filename+extention created outside of PrintWriter constructor for readability efficiency
+
 		PrintWriter writer = null;
 		try {
-		writer = new PrintWriter(fileName);
+			writer = new PrintWriter(fileName);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		
-		for(int i = 1; i < 10; i++) {
-			//System.out, execute naar de terminal, die werkt dus nu niet.
+
+		for (int i = 1; i < 10; i++) {
+//			 System.out, execute naar de terminal, die werkt dus nu niet.
 			writer.println("My first Java-Created TextFile with looped text (nr) " + i);
 		}
-		
+
 		writer.close();
-		
+		// Allways close the stream!
 	}
 
 }
+/*
+  PrintWriter: Voor eenmalig een eerste file aanmaken. zodra deze code opnieuw gerunt wordt, wordt het bestand overschreven.
+  FileWriter : Deze kan bestanden aanpassen, maar overschrijft ze niet met haar "true" functie
+ */
