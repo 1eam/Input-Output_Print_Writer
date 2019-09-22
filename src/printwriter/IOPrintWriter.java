@@ -14,6 +14,14 @@ public class IOPrintWriter {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+		
+		for(int i = 1; i < 10; i++) {
+			//System.out print naar de terminal, du die werkt niet
+			writer.println("My first Java-Created TextFile with looped text (nr) " + i);
+		}
+		
+		writer.close();
+		
 	}
 
 }
