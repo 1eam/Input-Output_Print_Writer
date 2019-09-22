@@ -7,6 +7,7 @@ public class IOPrintWriter {
 	public static void main(String[] args) {
 		
 		String fileName = "First Java-Created File.txt";
+		//filename+extention created outside of PrintWriter constructor for readability efficiency
 		
 		PrintWriter writer = null;
 		try {
@@ -16,7 +17,7 @@ public class IOPrintWriter {
 		}
 		
 		for(int i = 1; i < 10; i++) {
-			//System.out print naar de terminal, du die werkt niet
+			//System.out, execute naar de terminal, die werkt dus nu niet.
 			writer.println("My first Java-Created TextFile with looped text (nr) " + i);
 		}
 		
